@@ -15,7 +15,7 @@
 
 ## 단축 URL로 원 주소로 redirect 
 >application 실행 후 아래 URL에 단축 URL 입력
-> >http://localhost:8080/{shortenUrl}
+> >http://localhost:8080/redirect/{shortenUrl}
 
 ## 동일한 URL 생성 count
 >application 실행 후 아래 URL 접속 
