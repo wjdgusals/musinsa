@@ -3,6 +3,7 @@ package com.musinsa;
 import com.musinsa.domain.dto.ShortenUrl;
 import com.musinsa.domain.service.ShortenUrlservice;
 import com.musinsa.exception.InvalidParamException;
+import com.musinsa.exception.NoResultFoundException;
 import org.junit.Rule;
 import org.junit.jupiter.api.Test;
 import org.junit.rules.ExpectedException;
@@ -33,6 +34,18 @@ class MusinsaApplicationTests {
                                                         ()-> shortenUrlservice.createShortenUrl("invalid url"));
         String message = exception.getMessage();
         assertEquals("잘못된 URL입니다.", message);
+    }
+
+    @Test
+    void noResultFoundTest() {
+        ShortenUrl shortenUrl = shortenUrlservice.createShortenUrl("http://www.naver.com");
+
+        NoResultFoundException exception = assertThrows(NoResultFoundException.class,
+                ()-> shortenUrlservice.getOriginalUrl(shortenUrl.getShortenUrl()+"xxx"));
+
+        String message = exception.getMessage();
+        assertEquals("["+shortenUrl.getShortenUrl()+"xxx"+"]해당하는 URL이 없습니다.", message);
+
     }
 
     @Test

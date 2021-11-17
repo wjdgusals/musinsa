@@ -9,7 +9,7 @@ public class NoResultFoundException extends RuntimeException {
     }
 
     public NoResultFoundException(String message) {
-        super("There Are No Results By " + message);
+        super(message);
     }
 
     public NoResultFoundException(String message, Throwable cause) {
