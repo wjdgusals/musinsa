@@ -1,5 +1,5 @@
 ## 빌드 및 실행 방법
-- 빌드 `./gradlew clean build` 
+- 빌드 `./gradlew clean build`  (permission denied 발생 시 권한 부여 chmod 777 gradlew)
 - 실행 `./gradlew bootRun`
 
 ## 스웨거 사용방법
