@@ -19,7 +19,7 @@ public class MainController {
         return "main";
     }
 
-    @GetMapping(path = "/{shortenUrl}")
+    @GetMapping(path = "/redirect/{shortenUrl}")
     public RedirectView redirectOriginalUrl(@PathVariable String shortenUrl) throws Exception {
         return new RedirectView (shortenUrlservice.getOriginalUrl(shortenUrl).getOriginalUrl());
     }

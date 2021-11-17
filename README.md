@@ -13,4 +13,4 @@ http://localhost:8080/main
 
 ## 단축 URL로 원 주소로 redirect 
 아래 URL에 단축 URL 입력
-http://localhost:8080/{shortenUrl}
+http://localhost:8080/redirect/{shortenUrl}
