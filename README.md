@@ -23,7 +23,7 @@
 >아래 쿼리 실행
 ```sql
 
-select * from shorten_url;
+select * from t_shorten_url;
 
 ```
 
